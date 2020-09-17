@@ -10,7 +10,7 @@ To resolve this error download FFmpeg zip, from the link https://ffmpeg.zeranoe.
 
 Extract the contents of the zip folder downloaded from the above link. Copy and Paste them in the following locations
 
-For WINDOWS - C:\Python37\Scripts
+For WINDOWS - C:\Python37\Scripts <br>
 For MAC/LINUX - Paste the Contents in the folder where youtube-dl is located.
 In my case it is /Library/Frameworks/Python.framework/Versions/3.7/bin/
 
