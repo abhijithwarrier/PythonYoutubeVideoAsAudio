@@ -1,8 +1,8 @@
-### PYTHON GUI TO DOWNLOAD YOUTUBE VIDEOS AS AUDIO FILE
+## PYTHON GUI TO DOWNLOAD YOUTUBE VIDEOS AS AUDIO FILE
 
 'youtube_dl' module can be used to download Youtube Video as Audio File.
 
-## The module can be installed using the command - pip install youtube_dl
+### The module can be installed using the command - pip install youtube_dl
 
 When running the following program, an error may occur stating ERROR: ffprobe/avprobe and ffmpeg/avconv not found. Please install one.
 
