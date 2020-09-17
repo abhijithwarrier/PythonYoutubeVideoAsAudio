@@ -1,4 +1,27 @@
 # Programmer - python_scripts (Abhijith Warrier)
+#
+# PYTHON GUI TO DOWNLOAD YOUTUBE VIDEOS AS AUDIO FILE
+#
+# 'youtube_dl' module can be used to download Youtube Video as Audio File. The module can be installed
+# using the command - pip install youtube_dl
+#
+# When running the following program, an error may occur stating
+# ERROR: ffprobe/avprobe and ffmpeg/avconv not found. Please install one.
+#
+# To resolve this error download FFmpeg zip, from the link https://ffmpeg.zeranoe.com/builds/
+#
+# Extract the contents of the zip folder downloaded from the above link. Copy and Paste them in the
+# following locations
+#
+# For WINDOWS - C:\Python37\Scripts
+# For MAC/LINUX - Paste the Contents in the folder where youtube-dl is located.
+# In my case it is /Library/Frameworks/Python.framework/Versions/3.7/bin/
+#
+# For me it also showed an error 'ffmpeg cannot be opened because the manufacturer cannot be verified'.
+# In that case navigate to the directory '/Library/Frameworks/Python.framework/Versions/3.7/bin/' where
+# the ffmpeg and ffprobe executables are located and right-click on the ffmpeg file and click on Open.
+# On the next window, again click on Open.
+# Perform the same steps, if it shows the error for ffprobe as well
 
 # Importing necessary packages
 import youtube_dl
@@ -8,13 +31,13 @@ from tkinter import messagebox, filedialog
 
 # Defining CreateWidgets() function to create necessary tkinter widgets
 def CreateWidgets():
-    linkLabel = Label(root, text="YOUTUBE LINK  :", bg="turquoise4")
+    linkLabel = Label(root, text="YOUTUBE LINK  :", bg="cornsilk4")
     linkLabel.grid(row=1, column=0, pady=5, padx=5)
 
     root.linkText = Entry(root, width=55, textvariable=videoLink)
     root.linkText.grid(row=1, column=1, pady=5, padx=5, columnspan = 2)
 
-    destinationLabel = Label(root, text="DESTINATION    :", bg="turquoise4")
+    destinationLabel = Label(root, text="DESTINATION    :", bg="cornsilk4")
     destinationLabel.grid(row=2, column=0, pady=5, padx=5)
 
     root.destinationText = Entry(root, width=38, textvariable=downloadPath)
@@ -31,7 +54,7 @@ def Browse():
     # Presenting user with a pop-up for directory selection. initialdir argument is optional
     # Retrieving the user-input destination directory and storing it in downloadDirectory
     # Setting the initialdir argument is optional
-    dwldDirectory = filedialog.askdirectory(initialdir="/Users/abhijithwarrier/Downloads/Music")
+    dwldDirectory = filedialog.askdirectory(initialdir="/Users/abhijithwarrier/Music/YoutubeAudio")
 
     # Displaying the directory in the directory textbox
     downloadPath.set(dwldDirectory)
@@ -76,7 +99,7 @@ root = tk.Tk()
 root.geometry("650x120")
 root.resizable(False, False)
 root.title("Py_Youtube_Audio_Downloader")
-root.config(background="turquoise4")
+root.config(background="cornsilk4")
 
 # Creating the tkinter Variables
 videoLink = StringVar()
@@ -87,4 +110,3 @@ CreateWidgets()
 
 # Defining infinite loop to run application
 root.mainloop()
-
